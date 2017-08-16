@@ -1,5 +1,5 @@
 ## React-redux todoList
-![首页](/screenshot.png)
+![首页](/pic.gif)
 ### 如何执行
 ####  1、将项目克隆到本地，cd到react-redux-todolist
 ```javascript
