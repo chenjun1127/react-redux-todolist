@@ -19,7 +19,7 @@ module.exports = {
     },
     devServer: {
         inline: true, //实时刷新
-        port: 3000
+        port: 3000,
     },
     module: {
         rules: [{
