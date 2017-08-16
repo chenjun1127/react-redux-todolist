@@ -51,7 +51,7 @@ module.exports = {
         //这个使用uglifyJs压缩你的js代码
         new webpack.optimize.UglifyJsPlugin({ minimize: true }),
         new htmlWebpackPlugin({
-            title: 'webpack-app',
+            title: 'react-redux-todolist',
             template: path.resolve(TEM_PATH, 'index.html'),
             filename: 'index.html',
             inject: 'body'
