@@ -6,6 +6,7 @@ var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 var TEM_PATH = path.resolve(ROOT_PATH, 'templates');
 var htmlWebpackPlugin = require('html-webpack-plugin'); // 自动生成build文件夹及文件：
 module.exports = {
+    devtool: 'eval-source-map',
     entry: {
         app: path.resolve(APP_PATH, 'index.js')
     },
