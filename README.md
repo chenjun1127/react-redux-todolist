@@ -19,5 +19,21 @@ npm run dev
 ```
 #### 4、打开浏览器浏览 http://localhost:3000/
 
-Tips：在安装node-sass的时候，如不成功，请将镜像源换成taobao的，再执行cnpm install 或 yarn install;
-
+#### 5、Tips
+在安装node-sass的时候，有可能不成功，如不成功，请先删除 node_modules ，然后将镜像源换成taobao的，再执行cnpm install 或 yarn install;
+* 删除 node_modules
+```javascript
+rd/s/q node_modules
+```
+* 切换淘宝镜像源
+```bash
+npm:
+npm config set registry http://registry.npm.taobao.org
+yarn:
+yarn config set registry http://registry.npm.taobao.org
+```
+* 再安装依赖
+```bash
+npm install
+yarn 或 yarn install
+```
