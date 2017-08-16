@@ -1,7 +1,7 @@
 ## React-redux todoList
 ![首页](/screenshot.png)
 ### 如何执行
-####  1、将项目克隆到本地，cd到Webpack+Es6+React
+####  1、将项目克隆到本地，cd到react-redux-todolist
 ```javascript
 git clone git@github.com:chenjun1127/react-redux-todolist.git
 cd react-redux-todolist
