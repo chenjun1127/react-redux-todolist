@@ -19,8 +19,7 @@ npm run dev
 ```
 #### 4、打开浏览器浏览 http://localhost:3000/
 
-#### 5、Tips
-在安装node-sass的时候，有可能不成功，如不成功，请先删除 node_modules ，然后将镜像源换成taobao的，再执行cnpm install 或 yarn install;
+Tips：在安装node-sass的时候，有可能不成功，如不成功，请先删除 node_modules ，然后将镜像源换成taobao的，再执行npm install 或 yarn install；
 * 删除 node_modules
 ```javascript
 rd/s/q node_modules
