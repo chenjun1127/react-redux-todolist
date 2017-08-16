@@ -35,3 +35,9 @@ yarn config set registry http://registry.npm.taobao.org
 npm install
 yarn 或 yarn install
 ```
+也可以单独为node-sass设置淘宝的二进制包镜像
+```bash
+npm config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+或
+yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+```
