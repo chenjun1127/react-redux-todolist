@@ -1,0 +1,172 @@
+@import './style';
+
+$color: #3c9;
+$grayColor: #333;
+$fontSize: 18px;
+$h: 10px;
+$width: 200;
+@mixin horizontal-center() {
+    margin: 0 auto;
+}
+
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    *height: 1%;
+}
+
+@mixin border($borderWidth:1px,$borderColor:#d9d9d9,$borderStyle:solid) {
+    border: $borderWidth $borderColor $borderStyle;
+}
+
+@mixin boxSizing {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin verticalCenter($height:$h*4) {
+    height: $height;
+    line-height: $height;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+body {
+    background: #f5f5f5
+}
+
+.container {
+    width: $h*60;
+    background: #fff;
+    @include horizontal-center;
+    margin-top: 10%;
+    padding: $h;
+}
+
+.inner {
+    input[type=text] {
+        height: $h*4;
+        @include border;
+        background: #fff;
+        width: $width*2+110+px;
+        padding: 0 5px;
+        &:focus {
+            @include border(1px, #3c9, solid);
+        }
+    }
+    button {
+        height: $h*4+2;
+        border: none;
+        background: $color;
+        color: #fff;
+        cursor: pointer;
+        margin-left: $h;
+        &:hover {
+            color: #fff;
+            background: rgba($color, 0.7);
+        }
+    }
+}
+
+.dodo-list {
+    padding: 0;
+    margin: 0;
+    @include clearfix;
+    li {
+        list-style: none;
+        border-bottom: 1px solid #d9d9d9;
+        width: 100%;
+        @include clearfix;
+        em {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            @include border;
+            float: left;
+            margin-top: 13px;
+        }
+        em.selected {
+            position: relative;
+            border: 1px solid $color;
+            &:before {
+                display: block;
+                content: '';
+                width: 6px;
+                height: 1px;
+                background: $color;
+                position: absolute;
+                left: 4px;
+                top: 10px;
+                @include rotate(45)
+            }
+            &:after {
+                display: block;
+                content: '';
+                width: 10px;
+                height: 1px;
+                background: $color;
+                position: absolute;
+                left: 7px;
+                top: 9px;
+                @include rotate(-45)
+            }
+        }
+
+        p {
+            float: left;
+            width: 84%;
+            padding-left: 2%;
+            @include verticalCenter(50px);
+            margin: 0;
+        }
+        span {
+            float: left;
+            display: inline-block;
+            width: 10%;
+            @include verticalCenter(50px);
+            text-align: right;
+            padding-right: 10px;
+            @include boxSizing;
+            font-size: 18px;
+            color: $color;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    span {
+        display: inline-block;
+        @include border(1px, #3c9, solid);
+        padding: 8px 10px;
+        margin: 0 5px;
+        border-radius: 3px;
+        color: $color;
+    }
+    a {
+        color: $grayColor;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+}
+
+
