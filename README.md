@@ -26,9 +26,8 @@ rd/s/q node_modules
 ```
 * 切换淘宝镜像源
 ```bash
-npm:
 npm config set registry http://registry.npm.taobao.org
-yarn:
+或
 yarn config set registry http://registry.npm.taobao.org
 ```
 * 再安装依赖
