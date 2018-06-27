@@ -15,7 +15,7 @@ module.exports = {
         filename: '[name].js'
     },
     resolve: {
-         extensions: [".js", ".json", ".jsx", ".css","scss"],
+         extensions: [".js", ".json", ".jsx", ".css",".scss"],
     },
     devServer: {
         inline: true, //实时刷新
