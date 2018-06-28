@@ -41,3 +41,5 @@ npm config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
 或
 yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
 ```
+
+#### 如果你想查看mobx版本，请[点击这里](https://github.com/chenjun1127/react-mobx-todolist)
